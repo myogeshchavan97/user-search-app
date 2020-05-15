@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { connect } from 'react-redux';
 import { loadUsers } from '../actions/users';
 import UsersList from './UsersList';
-import HeaderPage from './HeaderPage';
+import Header from './Header';
 import Filters from './Filters';
 
 const HomePage = (props) => {
@@ -55,7 +55,7 @@ const HomePage = (props) => {
 
   return (
     <React.Fragment>
-      <HeaderPage handleSearch={handleSearch} />
+      <Header handleSearch={handleSearch} />
       <Filters handleSort={handleSort} sortOrder={sortOrder} />
       <UsersList users={users} isLoading={isLoading} />
     </React.Fragment>
